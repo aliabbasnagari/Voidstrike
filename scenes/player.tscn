@@ -3,8 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://cnkbx8kdivi0" path="res://kenney-space-shooter/PNG/playerShip1_red.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ry5u6dot57lq" path="res://scenes/player.gd" id="1_g2els"]
 
-[node name="Player" type="Node2D" unique_id=1251965001]
+[node name="Player" type="CharacterBody2D" unique_id=1064429305]
 script = ExtResource("1_g2els")
+speed = 300.0
 
 [node name="PlayerImage" type="Sprite2D" parent="." unique_id=675064033]
 texture = ExtResource("1_3vyb7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=449475440]
+polygon = PackedVector2Array(8, -38, -9, -38, -13, -11, -35, 2, -49, -6, -46, 24, -14, 28, -8, 38, 8, 38, 14, 28, 46, 25, 50, -6, 35, 2, 12, -11)
