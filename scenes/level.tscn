@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b6culji4mri" path="res://scenes/player.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://doocrjbb4ul07" path="res://scenes/level.gd" id="1_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://12ubkempcdrw" path="res://kenney-space-shooter/Backgrounds/purple.png" id="1_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://uwua8wcx1bv7" path="res://scenes/ui.tscn" id="4_mx8sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73mfh"]
 size = Vector2(64, 720)
@@ -63,6 +64,8 @@ position = Vector2(160, 576)
 
 [node name="MeteorTimer" type="Timer" parent="." unique_id=791366889]
 autostart = true
+
+[node name="UI" parent="." unique_id=1358347894 instance=ExtResource("4_mx8sn")]
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
