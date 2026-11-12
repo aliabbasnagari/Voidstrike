@@ -18,7 +18,7 @@ func _on_meteor_collision():
 	get_tree().call_group("ui", '_set_health', health)
 	
 	if health <= 0:
-		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
 		print("GAME OVER")
 
 func _on_meteor_hit_laser():

@@ -11,6 +11,7 @@ height = 54.0
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_a7dhc")
+speed = 800
 
 [node name="LaserImage" type="Sprite2D" parent="." unique_id=2058976819]
 texture = ExtResource("1_xmihv")
