@@ -24,42 +24,45 @@ position = Vector2(640, 360)
 scale = Vector2(5, 2.8125)
 texture = ExtResource("1_w7c3h")
 
+[node name="Borders" type="Node2D" parent="." unique_id=605575373]
+
+[node name="StaticBody2DLeft" type="StaticBody2D" parent="Borders" unique_id=1470558836]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2DLeft" unique_id=2130805733]
+position = Vector2(-32, 360)
+shape = SubResource("RectangleShape2D_73mfh")
+
+[node name="StaticBody2DRight" type="StaticBody2D" parent="Borders" unique_id=943638255]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2DRight" unique_id=948518804]
+position = Vector2(1312, 360)
+shape = SubResource("RectangleShape2D_nuc6k")
+
+[node name="StaticBody2DUp" type="StaticBody2D" parent="Borders" unique_id=1334541336]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2DUp" unique_id=1897468328]
+position = Vector2(640, -32)
+shape = SubResource("RectangleShape2D_yui51")
+
+[node name="StaticBody2DDown" type="StaticBody2D" parent="Borders" unique_id=1569181328]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2DDown" unique_id=601403633]
+position = Vector2(640, 752)
+shape = SubResource("RectangleShape2D_m6ggw")
+
 [node name="Meteors" type="Node2D" parent="." unique_id=569223650]
+
+[node name="Lasers" type="Node2D" parent="." unique_id=1356448341]
 
 [node name="Player" parent="." unique_id=1251965001 instance=ExtResource("1_2q6dc")]
 position = Vector2(160, 576)
 
-[node name="Borders" type="Node2D" parent="." unique_id=605575373]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=1470558836]
-collision_layer = 8
-
-[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=2130805733]
-position = Vector2(-32, 360)
-shape = SubResource("RectangleShape2D_73mfh")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=943638255]
-collision_layer = 8
-
-[node name="CollisionShape2DRight" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=948518804]
-position = Vector2(1312, 360)
-shape = SubResource("RectangleShape2D_nuc6k")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1334541336]
-collision_layer = 8
-
-[node name="CollisionShape2DUp" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=1897468328]
-position = Vector2(640, -32)
-shape = SubResource("RectangleShape2D_yui51")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1569181328]
-collision_layer = 8
-
-[node name="CollisionShape2DDown" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=601403633]
-position = Vector2(640, 752)
-shape = SubResource("RectangleShape2D_m6ggw")
-
 [node name="MeteorTimer" type="Timer" parent="." unique_id=791366889]
 autostart = true
 
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
