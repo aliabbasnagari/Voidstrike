@@ -39,11 +39,11 @@ text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1680792918]
+[node name="ScoreLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1680792918]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_wqhvx")
 theme_override_font_sizes/font_size = 30
-text = "YOUR SCORE: 0"
+text = "SCORE: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 

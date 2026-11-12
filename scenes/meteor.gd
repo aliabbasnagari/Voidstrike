@@ -5,6 +5,7 @@ var rotation_speed: int
 var direction_x: float
 
 signal collision
+signal hit_laser
 
 func _ready() -> void:
 	var rng: RandomNumberGenerator = RandomNumberGenerator.new()
@@ -25,3 +26,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	collision.emit()
+
+func _on_area_entered(area: Area2D) -> void:
+	area.queue_free()
+	queue_free()
+	hit_laser.emit()

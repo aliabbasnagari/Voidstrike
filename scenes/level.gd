@@ -11,6 +11,7 @@ func _on_meteor_timer_timeout() -> void:
 	var meteor = meteor_scene.instantiate()
 	$Meteors.add_child(meteor)
 	meteor.connect('collision', _on_meteor_collision)
+	meteor.connect('hit_laser', _on_meteor_hit_laser)
 
 func _on_meteor_collision():
 	health -= 1
@@ -20,6 +21,9 @@ func _on_meteor_collision():
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 		print("GAME OVER")
 
+func _on_meteor_hit_laser():
+	Global.score += 10
+	get_tree().call_group("ui", '_set_score', Global.score)
 
 func _on_player_laser(pos: Variant) -> void:
 	var laser = laser_scene.instantiate()
