@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ry5u6dot57lq" path="res://scenes/player.gd" id="1_g2els"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1064429305]
+collision_mask = 10
 script = ExtResource("1_g2els")
 speed = 300.0
 

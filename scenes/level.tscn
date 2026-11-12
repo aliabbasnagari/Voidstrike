@@ -32,20 +32,30 @@ position = Vector2(160, 576)
 [node name="Borders" type="Node2D" parent="." unique_id=605575373]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=1470558836]
+collision_layer = 8
 
 [node name="CollisionShape2DLeft" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=2130805733]
 position = Vector2(-32, 360)
 shape = SubResource("RectangleShape2D_73mfh")
 
-[node name="CollisionShape2DRight" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=1987910284]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=943638255]
+collision_layer = 8
+
+[node name="CollisionShape2DRight" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=948518804]
 position = Vector2(1312, 360)
 shape = SubResource("RectangleShape2D_nuc6k")
 
-[node name="CollisionShape2DUp" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=1810323259]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1334541336]
+collision_layer = 8
+
+[node name="CollisionShape2DUp" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=1897468328]
 position = Vector2(640, -32)
 shape = SubResource("RectangleShape2D_yui51")
 
-[node name="CollisionShape2DDown" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=1335415696]
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1569181328]
+collision_layer = 8
+
+[node name="CollisionShape2DDown" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=601403633]
 position = Vector2(640, 752)
 shape = SubResource("RectangleShape2D_m6ggw")
 
