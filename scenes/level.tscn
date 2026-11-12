@@ -55,14 +55,15 @@ collision_layer = 8
 position = Vector2(640, 752)
 shape = SubResource("RectangleShape2D_m6ggw")
 
-[node name="Meteors" type="Node2D" parent="." unique_id=569223650]
-
 [node name="Lasers" type="Node2D" parent="." unique_id=1356448341]
+
+[node name="Meteors" type="Node2D" parent="." unique_id=569223650]
 
 [node name="Player" parent="." unique_id=1251965001 instance=ExtResource("1_2q6dc")]
 position = Vector2(160, 576)
 
 [node name="MeteorTimer" type="Timer" parent="." unique_id=791366889]
+wait_time = 0.5
 autostart = true
 
 [node name="UI" parent="." unique_id=1358347894 instance=ExtResource("4_mx8sn")]

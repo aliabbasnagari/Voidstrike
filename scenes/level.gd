@@ -25,7 +25,9 @@ func _on_meteor_hit_laser():
 	Global.score += 10
 	get_tree().call_group("ui", '_set_score', Global.score)
 
-func _on_player_laser(pos: Variant) -> void:
+
+func _on_player_laser(pos: Variant, rot: Variant) -> void:
 	var laser = laser_scene.instantiate()
 	$Lasers.add_child(laser)
 	laser.position = pos
+	laser.rotation_degrees = rot
