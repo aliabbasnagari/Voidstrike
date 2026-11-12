@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bmvoqsfu1l7v6"]
+
+[ext_resource type="Script" uid="uid://douh8gqmu64ej" path="res://scenes/laser.gd" id="1_a7dhc"]
+[ext_resource type="Texture2D" uid="uid://1tvhpwcdltfc" path="res://kenney-space-shooter/PNG/Lasers/laserBlue01.png" id="1_xmihv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_73mfh"]
+radius = 4.0
+height = 54.0
+
+[node name="Laser" type="Area2D" unique_id=740961410]
+script = ExtResource("1_a7dhc")
+
+[node name="LaserImage" type="Sprite2D" parent="." unique_id=2058976819]
+texture = ExtResource("1_xmihv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457993863]
+shape = SubResource("CapsuleShape2D_73mfh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
