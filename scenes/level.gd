@@ -13,11 +13,13 @@ func _on_meteor_timer_timeout() -> void:
 	meteor.connect('collision', _on_meteor_collision)
 
 func _on_meteor_collision():
-	if health > 0:
-		health -= 1
-	else:
-		print("GAME OVER")
+	health -= 1
 	get_tree().call_group("ui", '_set_health', health)
+	
+	if health <= 0:
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+		print("GAME OVER")
+
 
 func _on_player_laser(pos: Variant) -> void:
 	var laser = laser_scene.instantiate()

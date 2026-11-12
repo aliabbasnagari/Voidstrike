@@ -17,5 +17,6 @@ func _set_health(amount: int):
 	for i in amount:
 		var life = TextureRect.new()
 		life.texture = life_image
+		life.stretch_mode = TextureRect.STRETCH_KEEP_CENTERED
 		$MarginContainer2/HBoxContainer.add_child(life)
 		
