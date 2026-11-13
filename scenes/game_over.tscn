@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dm2nqfhhngbci" path="res://kenney-space-shooter/Bonus/kenvector_future.ttf" id="1_wqhvx"]
 [ext_resource type="PackedScene" uid="uid://8nt8jhwd7k1i" path="res://scenes/level.tscn" id="2_racf3"]
 [ext_resource type="FontFile" uid="uid://bi8ytl12yh846" path="res://kenney-space-shooter/Bonus/kenvector_future_thin.ttf" id="2_tbwuq"]
+[ext_resource type="AudioStream" uid="uid://c4fb3nnwup666" path="res://kenney-space-shooter/Bonus/sfx_lose.ogg" id="5_7m3ot"]
 
 [node name="GameOver" type="Control" unique_id=1407632358]
 layout_mode = 3
@@ -67,3 +68,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tbwuq")
 theme_override_font_sizes/font_size = 30
 text = "SPACE TO START AGAIN"
+
+[node name="GameOverSound" type="AudioStreamPlayer2D" parent="." unique_id=608255809]
+stream = ExtResource("5_7m3ot")

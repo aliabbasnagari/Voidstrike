@@ -3,6 +3,7 @@ extends Control
 @export var level_scene: PackedScene
 
 func _ready() -> void:
+	$GameOverSound.play()
 	$CenterContainer/VBoxContainer/ScoreLabel.text = "SCORE: " + str(Global.score)
 
 func _process(_delta: float) -> void:

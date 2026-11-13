@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d1a1xkelp2w1n" path="res://scenes/meteor.gd" id="1_pxso2"]
 [ext_resource type="Texture2D" uid="uid://dpdhceljbct55" path="res://kenney-space-shooter/PNG/Meteors/meteorBrown_big4.png" id="1_tcwo0"]
+[ext_resource type="AudioStream" uid="uid://cpxdfm1hwun8k" path="res://kenney-space-shooter/Bonus/explosion-firework-skyrocket-explode-bang-01.ogg" id="3_8tfog"]
+[ext_resource type="AudioStream" uid="uid://43vpqksbbggf" path="res://kenney-space-shooter/Bonus/impact-abstract-underwater-01.ogg" id="4_lhxke"]
 
 [node name="Meteor" type="Area2D" unique_id=1648550315]
 collision_layer = 2
@@ -13,6 +15,12 @@ texture = ExtResource("1_tcwo0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=384647719]
 polygon = PackedVector2Array(-35, -34, 17, -48, 49, -13, 31, 43, -19, 48, -50, 11)
+
+[node name="LaserHitSound" type="AudioStreamPlayer2D" parent="." unique_id=395641114]
+stream = ExtResource("3_8tfog")
+
+[node name="PlayerHitSound" type="AudioStreamPlayer2D" parent="." unique_id=1962450765]
+stream = ExtResource("4_lhxke")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

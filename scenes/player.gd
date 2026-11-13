@@ -22,6 +22,7 @@ func _process(_delta: float) -> void:
 		laser.emit($LaserMarker.global_position, get_angle(position, $LaserMarker.global_position) + 90)
 		laser_ready = false
 		$LaserTimer.start()
+		$LaserSound.play()
 	
 	move_and_slide()
 	

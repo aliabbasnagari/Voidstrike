@@ -14,6 +14,7 @@ func _on_meteor_timer_timeout() -> void:
 	meteor.connect('hit_laser', _on_meteor_hit_laser)
 
 func _on_meteor_collision():
+	$PlayerHitSound.play()
 	health -= 1
 	get_tree().call_group("ui", '_set_health', health)
 	
@@ -22,6 +23,7 @@ func _on_meteor_collision():
 		print("GAME OVER")
 
 func _on_meteor_hit_laser():
+	$LaserHitSound.play()
 	Global.score += 10
 	get_tree().call_group("ui", '_set_score', Global.score)
 
