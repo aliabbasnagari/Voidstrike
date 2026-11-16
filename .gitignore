@@ -21,6 +21,7 @@ data_*/
 *.sln
 *.user
 *.godot
+!project.godot
 
 # GDScript temporary files
 *.gd.uid.tmp
