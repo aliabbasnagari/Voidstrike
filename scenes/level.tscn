@@ -22,10 +22,12 @@ size = Vector2(1280, 64)
 [node name="Level" type="Node2D" unique_id=297922621]
 script = ExtResource("1_mx8sn")
 
-[node name="BG" type="Sprite2D" parent="." unique_id=1051550263]
-position = Vector2(640, 360)
-scale = Vector2(5, 2.8125)
+[node name="BG" type="TextureRect" parent="." unique_id=1346753216]
+texture_filter = 1
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("1_w7c3h")
+stretch_mode = 1
 
 [node name="Borders" type="Node2D" parent="." unique_id=605575373]
 
